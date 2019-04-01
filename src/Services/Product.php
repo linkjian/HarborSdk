@@ -6,7 +6,10 @@
  * Time: 15:33
  */
 namespace Harbor\Services;
-
+/**
+ * Class Product
+ * @package Harbor\Services
+ */
 class Product extends Service
 {
     protected $endpoint = 'products';
