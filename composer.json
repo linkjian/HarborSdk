@@ -1,5 +1,5 @@
 {
-    "name": "harbor/sdk",
+    "name": "harbor-chicv/sdk",
     "description": "Harbor Store API SDK",
     "type": "library",
     "require": {
