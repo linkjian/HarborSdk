@@ -1,0 +1,21 @@
+{
+    "name": "harbor/sdk",
+    "description": "Harbor Store API SDK",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "~6.2"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Harbor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "linjian",
+            "email": "linjian@chicv.com"
+        }
+    ]
+}
