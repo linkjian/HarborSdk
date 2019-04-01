@@ -2,6 +2,7 @@
     "name": "harbor-chicv/sdk",
     "description": "Harbor Store API SDK",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": ">=7.1",
         "guzzlehttp/guzzle": "~6.2"
