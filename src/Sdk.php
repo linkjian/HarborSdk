@@ -7,6 +7,7 @@ use Harbor\Http\Client;
  * Class Sdk
  * @package Harbor
  * @property \Harbor\Services\Product product
+ * @property \Harbor\Services\Category category
  */
 class Sdk
 {
@@ -20,6 +21,9 @@ class Sdk
      */
     private $services;
 
+    /**
+     * @var
+     */
     private $client;
 
     /**
