@@ -30,7 +30,7 @@ class Service
     public function get(int $id)
     {
         $uri = $this->endpoint . '/' . $id;
-        return $this->client->request('get', $uri);
+        return $this->request('get', $uri);
     }
 
     /**
@@ -45,7 +45,7 @@ class Service
             'page' => $page,
             'limit' => $limit,
         ], $query);
-        return $this->client->request('get', $this->endpoint, ['query' => $query]);
+        return $this->request('get', $this->endpoint, ['query' => $query]);
     }
 
     /**
@@ -54,7 +54,7 @@ class Service
      */
     public function insert(array $data)
     {
-        return $this->client->request('post', $this->endpoint,['json' => $data]);
+        return $this->request('post', $this->endpoint,['json' => $data]);
     }
 
     /**
@@ -66,7 +66,7 @@ class Service
     public function update(int $id, array $data)
     {
         $uri = $this->endpoint . '/' . $id;
-        return $this->client->request('put', $uri, ['json' => $data]);
+        return $this->request('put', $uri, ['json' => $data]);
     }
 
     /**
@@ -76,6 +76,19 @@ class Service
     public function delete(int $id)
     {
         $uri = $this->endpoint . '/' . $id;
-        return $this->client->request('delete', $uri);
+        return $this->request('delete', $uri);
+    }
+
+    /**
+     * @param $method
+     * @param $uri
+     * @param array $options
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function request($method, $uri, $options = [])
+    {
+        $response = $this->client->request($method, $uri, $options);
+        return json_decode($response->getBody()->getContents(), true);
     }
 }
