@@ -8,6 +8,7 @@ use Harbor\Http\Client;
  * @package Harbor
  * @property \Harbor\Services\Product product
  * @property \Harbor\Services\Category category
+ * @property \Harbor\Services\Webhook webhook
  */
 class Sdk
 {
