@@ -45,7 +45,7 @@ class Service
             'page' => $page,
             'limit' => $limit,
         ], $query);
-        $this->client->request('get', $this->endpoint, ['query' => $query]);
+        return $this->client->request('get', $this->endpoint, ['query' => $query]);
     }
 
     /**
@@ -76,6 +76,6 @@ class Service
     public function delete(int $id)
     {
         $uri = $this->endpoint . '/' . $id;
-        $this->client->request('delete', $uri);
+        return $this->client->request('delete', $uri);
     }
 }
