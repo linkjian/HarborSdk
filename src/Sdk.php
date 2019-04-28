@@ -80,4 +80,12 @@ class Sdk
             $this->services[strtolower($name)]['object'] = null;
         }
     }
+
+    /**
+     * @return array
+     */
+    public function getServices(): array
+    {
+        return $this->services;
+    }
 }
