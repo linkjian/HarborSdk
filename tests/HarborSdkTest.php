@@ -9,5 +9,5 @@ $sdk = new Harbor\Sdk(
         'retry' => 5, // Number of retries when the request failed
     ]
 );
-$res = $sdk->webhook->list();
+$res = $sdk->productVariant->parent(2)->get(96);
 var_dump($res);
