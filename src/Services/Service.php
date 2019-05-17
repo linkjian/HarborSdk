@@ -91,4 +91,10 @@ class Service
         $response = $this->client->request($method, $uri, $options);
         return json_decode($response->getBody()->getContents(), true);
     }
+
+    public function parent($id)
+    {
+        $this->endpoint = str_replace('{parent}', $id, $this->endpoint);
+        return $this;
+    }
 }

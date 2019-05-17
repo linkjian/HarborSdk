@@ -10,7 +10,7 @@ namespace Harbor\Services;
  * Class Product
  * @package Harbor\Services
  */
-class Product extends Service
+class ProductVariant extends Service
 {
-    protected $endpoint = 'products';
+    protected $endpoint = 'products/{parent}/variants';
 }

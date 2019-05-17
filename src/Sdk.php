@@ -9,6 +9,7 @@ use Harbor\Http\Client;
  * @property \Harbor\Services\Product product
  * @property \Harbor\Services\Category category
  * @property \Harbor\Services\Webhook webhook
+ * @property \Harbor\Services\ProductVariant productVariant
  */
 class Sdk
 {
@@ -76,8 +77,8 @@ class Sdk
             if (!class_exists($class)) {
                 continue;
             }
-            $this->services[strtolower($name)]['class'] = $class;
-            $this->services[strtolower($name)]['object'] = null;
+            $this->services[lcfirst($name)]['class'] = $class;
+            $this->services[lcfirst($name)]['object'] = null;
         }
     }
 
