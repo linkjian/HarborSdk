@@ -14,4 +14,10 @@ namespace Harbor\Services;
 class Order extends Service
 {
     protected $endpoint = 'orders';
+
+    public function refund(int $id, array $data)
+    {
+        $uri = $this->endpoint . '/' . $id . '/refund';
+        return $this->request('post', $uri, ['json' => $data]);
+    }
 }
