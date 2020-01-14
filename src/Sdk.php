@@ -12,6 +12,7 @@ use Harbor\Http\Client;
  * @property \Harbor\Services\Order order
  * @property \Harbor\Services\Webhook webhook
  * @property \Harbor\Services\ProductVariant productVariant
+ * @property \Harbor\Services\Inventories inventories
  */
 class Sdk
 {
